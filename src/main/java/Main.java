@@ -12,12 +12,8 @@ public class Main {
         jFrame.setLocationRelativeTo(null);
         jFrame.setVisible(true);
 
-
-
-
         JButton button = new JButton("JBIB");
         button.setBounds(50, 200, 100, 30);
-
 
         JButton plusButton = new JButton("+");
         plusButton.setBounds(50, 50, 100, 30);
@@ -26,7 +22,6 @@ public class Main {
         panel.setBounds(10, 10, 200, 300);
         panel.add(button);
         panel.add(plusButton);
-
 
         jFrame.add(panel);
 
