@@ -48,10 +48,6 @@ public class GUI {
 
         panel.add(button);
         panel.add(label);
-
-
-
-
         createButtons();
 
         frame.add(panel, BorderLayout.CENTER);
@@ -81,13 +77,6 @@ public class GUI {
 
         panel.add(label);
 
-
-
-
-
-//        createLabel();
-
-
 //        createLabel();
         createButtons();
 
@@ -97,10 +86,5 @@ public class GUI {
         frame.setMaximumSize(new Dimension(500, 700));
         frame.setMinimumSize(new Dimension(500, 700));
         frame.setVisible(true);
-
-
     }
-
-
-
 }
