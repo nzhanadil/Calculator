@@ -83,14 +83,14 @@ public class Calculator {
 //        operation = actionEvent.getActionCommand();
     }
 
-//    public boolean isNumeric(String text) {
-//        try {
-//            Integer.parseInt(text);
-//            return true;
-//        } catch (NumberFormatException e) {
-//            return false;
-//        }
-//    }
+    public boolean isNumeric(String text) {
+        try {
+            Integer.parseInt(text);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
 
 
     public static void main(String[] args) {
