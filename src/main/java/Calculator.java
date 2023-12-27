@@ -66,7 +66,7 @@ public class Calculator {
                 operation = "";
                 break;
             case "+/-":
-                label.setText(Integer.parseInt(label.getText()) < 0 ? label.getText().substring(1) : "-" + label.getText());
+                label.setText(label.getText().startsWith("-") ? label.getText().substring(1) : "-" + label.getText());
                 break;
             case "=":
 
