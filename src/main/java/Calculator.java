@@ -9,6 +9,7 @@ public class Calculator {
 
     JFrame frame;
     JPanel panel;
+    JPanel btnPanel;
     JLabel label;
 
     int firstValue = 0;
@@ -27,22 +28,48 @@ public class Calculator {
     public Calculator() {
         frame = new JFrame("Calculator");
         panel = new JPanel();
+        btnPanel = new JPanel();
 
-        panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+
+        btnPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+        btnPanel.setLayout(new GridBagLayout());
+
+        GridBagConstraints c = new GridBagConstraints();
+//        if (shouldFill) {
+//            //natural height, maximum width
+//            c.fill = GridBagConstraints.HORIZONTAL;
+//        }
+
+
+//        if (shouldWeightX) {
+//            c.weightx = 0.5;
+//        }
+        c.fill = GridBagConstraints.HORIZONTAL;
+        c.gridx = 2;
+        c.gridy = 1;
+
+
+//        panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
         panel.setLayout(new GridLayout(5, 4));
 
         label = new JLabel(String.valueOf(firstValue));
         label.setSize(500, 100);
 
-        panel.add(label);
+        btnPanel.add(label, c);
         createButtons();
 
+        c.weightx = 0.5;
+        c.gridx = 2;
+        c.gridy = 5;
 
-        frame.add(panel, BorderLayout.CENTER);
+        btnPanel.add(panel, c);
+
+
+        frame.add(btnPanel, BorderLayout.CENTER);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
-        frame.setMaximumSize(new Dimension(500, 700));
-        frame.setMinimumSize(new Dimension(500, 700));
+//        frame.setMaximumSize(new Dimension(500, 700));
+//        frame.setMinimumSize(new Dimension(500, 700));
         frame.setVisible(true);
     }
 
