@@ -55,6 +55,8 @@ public class Calculator {
         label = new JLabel(String.valueOf(firstValue));
         label.setSize(500, 100);
 
+        label.setFont(label.getFont().deriveFont(30.0F));
+
         btnPanel.add(label, c);
         createButtons();
 
@@ -78,6 +80,7 @@ public class Calculator {
         for (String symbol : buttonSymbols) {
             JButton button = new JButton(symbol);
             button.addActionListener(this::actionEvent);
+            button.setFont(button.getFont().deriveFont(20.0F));
             panel.add(button);
         }
     }
