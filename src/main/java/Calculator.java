@@ -6,7 +6,6 @@ import java.awt.event.ActionEvent;
 
 public class Calculator {
 
-
     JFrame frame;
     JPanel panel;
     JPanel btnPanel;
@@ -15,7 +14,6 @@ public class Calculator {
     int firstValue = 0;
     int secondValue = 0;
     String operation = "";
-
 
     private static String[] buttonSymbols = {
             "AC", "+/-", "%", "÷",
@@ -30,7 +28,6 @@ public class Calculator {
         panel = new JPanel();
         btnPanel = new JPanel();
 
-
         btnPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
         btnPanel.setLayout(new GridBagLayout());
 
@@ -40,14 +37,12 @@ public class Calculator {
 //            c.fill = GridBagConstraints.HORIZONTAL;
 //        }
 
-
 //        if (shouldWeightX) {
 //            c.weightx = 0.5;
 //        }
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 2;
         c.gridy = 1;
-
 
 //        panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
         panel.setLayout(new GridLayout(5, 4));
@@ -65,7 +60,6 @@ public class Calculator {
         c.gridy = 5;
 
         btnPanel.add(panel, c);
-
 
         frame.add(btnPanel, BorderLayout.CENTER);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
